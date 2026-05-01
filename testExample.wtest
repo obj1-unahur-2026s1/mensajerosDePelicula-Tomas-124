@@ -1,9 +1,14 @@
-import example.pepita
+import mensajero.*
+import destino.*
 
 describe "group of tests for pepita" {
 
-  test "pepita has initial energy" {
-    assert.equals(100, pepita.energy())
+  test "test broklyn" {
+    assert.that(puenteBroklyn.aceptarPaquete(roberto))
   }
 
+  test "test matrix no pago"{
+    paquete.noPago()
+    assert.notThat(matrix.aceptarPaquete(neo))
+  }
 }

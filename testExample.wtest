@@ -1,5 +1,6 @@
 import mensajero.*
 import destino.*
+import mensajeria.*
 
 describe "group of tests for pepita" {
 
@@ -10,5 +11,16 @@ describe "group of tests for pepita" {
   test "test matrix no pago"{
     paquete.noPago()
     assert.notThat(matrix.aceptarPaquete(neo))
+  }
+
+  test "mensajeria"{
+    assert.equals(80, empresa.pesoUltimo())
+  }
+  test "mensajeria2"{
+    assert.that(empresa.mensajeriaesGrande())
+  }
+
+  test "mensajeria3"{
+    assert.notThat(empresa.puedeEntregar(matrix))
   }
 }
